@@ -20,7 +20,7 @@ def get_location(img):
 
 
 def mark_pothole(img):
-	pothole = ImageTk.PhotoImage(Image.open(img).resize((640, 400)))
+	pothole = ImageTk.PhotoImage(Image.open(img).resize((320, 200)))
 	lat, lon = get_location(img)
 	marker = map_widget.set_marker(lat, lon, 
 		text='POTHOLE', image=pothole)
